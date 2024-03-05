@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+char op;
+float first, second, result;
+printf("Enter an operator (+, -, *, /): ");
+scanf("%c", &op);
+printf("Enter two operands: ");
+scanf("%f %f", &first, &second);
+
+if (op == '+') {
+    result = first + second;
+    printf("%f + %f = %f", first, second, result);
+} else if (op == '-') {
+    result = first - second;
+    printf("%f - %f = %f", first, second, result);
+} else if (op == '*') {
+    result = first * second;
+    printf("%f * %f = %f", first, second, result);
+} else if (op == '/') {
+    if (second != 0) {
+        result = first / second;
+        printf("%f / %f = %f", first, second, result);
+    } else {
+        printf("Error! Division by zero.");
+    }
+} else {
+    printf("Error! operator is not correct");
+}
+
+return 0;
+}
